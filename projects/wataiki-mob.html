@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wataiki Mob — Subscription &amp; Document Platform | Case Study | Karim Boulad</title>
+    <meta name="description" content="Case study: Wataiki Mob, an admin portal for a document-services platform — subscription review and earnings in Algerian dinars, ID cards, merged PDFs, OCR extraction, and QR codes.">
+    <meta name="author" content="Karim Boulad">
+    <meta name="theme-color" content="#060a12">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Wataiki Mob — Subscription &amp; Document Platform | Case Study | Karim Boulad">
+    <meta property="og:description" content="An admin portal built with Laravel and MySQL — subscriptions, document services, OCR, and QR codes.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%2360a5fa'%3EKB%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+    <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
+        <symbol id="i-gitlab" viewBox="0 0 24 24"><path d="M23.6 9.6l-.03-.08-3.28-8.57a.85.85 0 0 0-.34-.41.88.88 0 0 0-1 .05.88.88 0 0 0-.29.45l-2.22 6.8H7.56L5.34 1.04a.86.86 0 0 0-.29-.45.88.88 0 0 0-1-.05.86.86 0 0 0-.34.41L.43 9.52l-.04.08a6.09 6.09 0 0 0 2.02 7.04l.01.01.03.02 5 3.74 2.47 1.87 1.51 1.14a1.01 1.01 0 0 0 1.22 0l1.51-1.14 2.47-1.87 5.03-3.76.01-.01a6.09 6.09 0 0 0 2.02-7.04Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+        <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></symbol>
+        <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+        <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></symbol>
+        <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+        <symbol id="i-graduation" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+        <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+        <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+        <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+        <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5Z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html">
+                <span class="brand-mark">KB</span>
+                <span class="brand-text">
+                    <strong>Karim Boulad</strong>
+                    <small>Full Stack &amp; Desktop Dev</small>
+                </span>
+            </a>
+
+            <nav class="nav" id="primary-nav" aria-label="Primary navigation">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#projects">Projects</a>
+                <a href="../index.html#skills">Skills</a>
+                <a href="../index.html#experience">Experience</a>
+                <a href="../index.html#contact">Contact</a>
+                <a class="btn btn-primary btn-sm nav-cta" href="mailto:karim.boulad.dev@gmail.com">Hire me</a>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section class="case-hero">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="../index.html#projects">Projects</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page">Wataiki Mob</span>
+                </nav>
+
+                <span class="eyebrow"><span class="status-dot"></span> Case study · Document services platform</span>
+
+                <h1 class="case-title">Wataiki Mob</h1>
+
+                <p class="case-lead">
+                    An admin portal for a document-services platform — subscriptions, earnings, ID cards, merged
+                    PDFs, OCR extraction, and QR codes, with every subscription reviewed, locked, and tracked.
+                </p>
+
+                <dl class="case-meta">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Backend &amp; Full Stack Developer</dd>
+                    </div>
+                    <div>
+                        <dt>Type</dt>
+                        <dd>Document services platform</dd>
+                    </div>
+                    <div>
+                        <dt>Platform</dt>
+                        <dd>Web admin portal</dd>
+                    </div>
+                    <div>
+                        <dt>Core stack</dt>
+                        <dd>Laravel · MySQL · REST API</dd>
+                    </div>
+                </dl>
+
+                <figure class="cover-frame">
+                    <div class="cover-bar">
+                        <span></span><span></span><span></span>
+                        <p>wataikimob.com — admin dashboard</p>
+                    </div>
+                    <img src="../assets/imgs/wataiki-dashboard.webp" alt="Wataiki Mob admin dashboard with subscription and earnings statistics" width="1917" height="983" fetchpriority="high">
+                </figure>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="case-layout">
+                <aside class="case-aside">
+                    <span class="case-aside-label">On this page</span>
+                    <nav class="case-nav" aria-label="Case study sections">
+                        <a href="#overview">Overview</a>
+                        <a href="#role">My role</a>
+                        <a href="#features">Key features</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#stack">Tech stack</a>
+                        <a href="#outcome">Outcome</a>
+                    </nav>
+                    <a class="btn btn-ghost btn-sm" href="../index.html#projects">
+                        <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+                        All projects
+                    </a>
+                </aside>
+
+                <div class="case-content">
+                    <section class="case-section" id="overview">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg> Overview</h2>
+                        <p>
+                            <strong>Wataiki Mob</strong> is a document-services platform. Users subscribe — yearly or
+                            monthly — to access services such as ID cards, photo shoots, merged PDFs, OCR extraction,
+                            documents, and QR codes. The admin portal is where the business runs: user management, roles
+                            and permissions, subscription review, and the document pipeline.
+                        </p>
+                        <p>
+                            Subscriptions are not just rows in a table. Each one is attached to a customer, an uploaded
+                            document image, a plan, a start and end date, a price in Algerian dinars, a review status,
+                            and a locked or unlocked state. At the time of capture the portal held
+                            <strong>56 subscriptions</strong> — 49 pending, 6 approved, 1 rejected — with
+                            <strong>49,600.00 DZD</strong> in total earnings, 54 yearly plans and 2 monthly plans.
+                        </p>
+                        <ul class="case-list">
+                            <li>Subscription KPIs: total, pending, approved, rejected, locked, and unlocked.</li>
+                            <li>Yearly and monthly plans with pricing, dates, and earnings in DZD.</li>
+                            <li>A searchable subscription list with document thumbnails and row actions.</li>
+                            <li>A detail view with customer contact information, attached document, and review status.</li>
+                            <li>Document services: ID cards, shoots, merged PDFs, OCRs, documents, and QR codes.</li>
+                            <li>User management plus roles and permissions for the admin team.</li>
+                        </ul>
+                    </section>
+
+                    <section class="case-section" id="role">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-briefcase"></use></svg> My role</h2>
+                        <p>
+                            I built the admin portal end to end — the data model, the subscription workflow, the
+                            document services, and the dashboards the team uses to review and approve requests.
+                        </p>
+                        <ul class="case-list">
+                            <li>Modelled users, roles and permissions, plans, subscriptions, documents, and review history.</li>
+                            <li>Built the dashboard aggregations: subscription counts by status, locked/unlocked totals, plan mix, and earnings.</li>
+                            <li>Built the subscription list with search, document thumbnails, date ranges, status, lock state, and per-row actions.</li>
+                            <li>Built the subscription detail page with customer details, attached document, price, review status, and edit flow.</li>
+                            <li>Implemented the document pipeline: ID cards, shoots, merged PDFs, OCR extraction, documents, and QR code generation.</li>
+                            <li>Added role-based access control so the admin team only sees the sections it needs.</li>
+                        </ul>
+                    </section>
+
+                    <section class="case-section" id="features">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-server"></use></svg> Key features</h2>
+                        <div class="case-features">
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Subscription dashboard</h3>
+                                <p>One screen for total, pending, approved, and rejected subscriptions, plus locked and unlocked counts and earnings.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Review workflow</h3>
+                                <p>Every subscription starts pending, is reviewed by an admin, and can be approved or rejected — then locked once it is active.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Customer records</h3>
+                                <p>Name, email, phone, and the uploaded document sit together on the subscription, so support has the full picture.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Plans &amp; pricing</h3>
+                                <p>Yearly and monthly subscriptions with explicit start and end dates, prices in DZD, and total and yearly earnings.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Document services</h3>
+                                <p>ID cards, shoots, merged PDFs, OCR extraction, documents, and QR codes — each with its own admin section.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Roles &amp; permissions</h3>
+                                <p>User management and granular permissions keep the admin team separated by responsibility.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="case-section" id="gallery">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-layout"></use></svg> Gallery</h2>
+                        <p>Click any screenshot to open it at full size. Use the arrow keys to move between images.</p>
+
+                        <div class="case-gallery">
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wataiki-dashboard.webp"
+                                    data-caption="Dashboard — subscription totals by status, locked and unlocked counts, yearly and monthly plans, and total and yearly earnings.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wataiki-dashboard.webp" alt="Wataiki Mob dashboard with subscription KPIs and earnings" width="1917" height="983" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Dashboard</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wataiki-subscriptions.webp"
+                                    data-caption="List of subscriptions — search, document thumbnails, user, plan, start and end dates, status, lock state, and row actions.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wataiki-subscriptions.webp" alt="Wataiki Mob subscription list with document thumbnails and status columns" width="1920" height="967" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Subscriptions</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wataiki-subscription-details.webp"
+                                    data-caption="Subscription #121 — customer details, the attached document, the plan dates, the 9,900.00 DZD price, and its review status.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wataiki-subscription-details.webp" alt="Wataiki Mob subscription detail page with customer and document information" width="1920" height="976" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Subscription details</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="case-section" id="stack">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg> Tech stack</h2>
+                        <p>An internal portal with money and documents in it, so the important parts are the data model, the audit trail, and the safety of every bulk action.</p>
+                        <ul class="case-stack">
+                            <li>Laravel</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>REST API</li>
+                            <li>OCR extraction</li>
+                            <li>PDF merging</li>
+                            <li>QR code generation</li>
+                            <li>Role-based access control</li>
+                            <li>Git</li>
+                        </ul>
+
+                        <div class="case-callout">
+                            <p>
+                                <strong>Architecture:</strong> a Laravel admin application over a MySQL schema built
+                                around users, roles, plans, subscriptions, and documents, with a document layer that
+                                merges PDFs, extracts text through OCR, produces ID cards, and generates QR codes — all
+                                tied back to the subscription that unlocked the service.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="case-section" id="outcome">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg> Outcome</h2>
+                        <p>
+                            Wataiki Mob runs its subscriptions from a single admin portal: 56 subscriptions tracked,
+                            49,600.00 DZD in recorded earnings, and a review flow that keeps pending requests from
+                            getting lost between messages. Approving, rejecting, locking, and unlocking are explicit
+                            actions with a visible state.
+                        </p>
+                        <p>
+                            Because the document services and the subscription live in the same system, an approved
+                            request immediately has everything it needs — the customer, the uploaded document, the
+                            plan dates, and the price that was paid.
+                        </p>
+
+                        <div class="case-actions">
+                            <a class="btn btn-primary btn-sm" href="https://wataikimob.com" target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg>
+                                Visit platform
+                            </a>
+                            <a class="btn btn-ghost btn-sm" href="mailto:karim.boulad.dev@gmail.com">
+                                <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                                Ask about this project
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <section class="next-case">
+            <div class="container next-case-inner">
+                <div>
+                    <span class="eyebrow">Next case study</span>
+                    <h2>Kuwait Association of Surgeons</h2>
+                    <p>A national surgical association — a public website plus a membership admin portal for subscriptions, document verification, and event certificates.</p>
+                </div>
+                <div class="next-case-actions">
+                    <a class="btn btn-ghost btn-sm" href="../index.html#projects">
+                        <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+                        All projects
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="kas.html">
+                        Read the case study
+                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span data-year>2026</span> Karim Boulad. All rights reserved.</p>
+            <p class="footer-note">Built with plain HTML, CSS &amp; JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://github.com/karim-boulad0" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg class="icon icon-brand" aria-hidden="true"><use href="#i-github"></use></svg>
+                </a>
+                <a href="https://gitlab.com/karim-boulad0" target="_blank" rel="noopener" aria-label="GitLab">
+                    <svg class="icon icon-brand" aria-hidden="true"><use href="#i-gitlab"></use></svg>
+                </a>
+                <a href="mailto:karim.boulad.dev@gmail.com" aria-label="Email">
+                    <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="to-top" id="to-top" type="button" aria-label="Back to top">
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+        <button class="lb-close" id="lb-close" type="button" aria-label="Close image viewer">
+            <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+        <button class="lb-prev" id="lb-prev" type="button" aria-label="Previous image">
+            <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+        </button>
+        <figure>
+            <img id="lb-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+            <figcaption id="lb-caption"></figcaption>
+        </figure>
+        <button class="lb-next" id="lb-next" type="button" aria-label="Next image">
+            <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg>
+        </button>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
