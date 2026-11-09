@@ -2,6 +2,8 @@
 
 A fast, static portfolio built with **plain HTML, CSS, and JavaScript**. No build step, no frameworks, no package manager — ready for GitHub Pages.
 
+**Live:** https://karim-boulad0.github.io/
+
 ## Structure
 
 ```
