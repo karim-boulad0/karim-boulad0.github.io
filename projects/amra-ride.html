@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amra RIDE — Case Study | Karim Boulad</title>
-    <meta name="description" content="Case study: Amra RIDE, a rideshare and local delivery platform launching in metro Atlanta — upfront fares, smart dispatch, trip PIN verification, and a real-time operations dashboard powered by Laravel APIs.">
+    <meta name="description" content="Case study: Amra RIDE, a rideshare and local delivery platform launching in metro Atlanta — upfront fares, smart dispatch, trip PIN verification, and a real-time operations dashboard powered by Laravel and Node.js APIs.">
     <meta name="author" content="Karim Boulad">
     <meta name="theme-color" content="#060a12">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Amra RIDE — Case Study | Karim Boulad">
-    <meta property="og:description" content="A rideshare and local delivery platform built with Laravel, MySQL, and REST APIs.">
+    <meta property="og:description" content="A rideshare and local delivery platform built with Laravel, Node.js, MySQL, and REST APIs — real-time ride and driver updates, smart dispatch, and an operations dashboard.">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%2360a5fa'%3EKB%3C/text%3E%3C/svg%3E">
 
@@ -95,8 +95,8 @@
 
                 <p class="case-lead">
                     A rideshare and local delivery platform built around fair driver earnings — upfront fares, smart
-                    dispatch, trip PIN verification, and a real-time operations dashboard. Launching first in metro
-                    Atlanta.
+                    dispatch, trip PIN verification, and a Node.js real-time layer that keeps riders, drivers, and
+                    operations in sync. Launching first in metro Atlanta.
                 </p>
 
                 <dl class="case-meta">
@@ -114,7 +114,7 @@
                     </div>
                     <div>
                         <dt>Core stack</dt>
-                        <dd>Laravel · MySQL · REST API</dd>
+                        <dd>Laravel · Node.js · MySQL · REST API</dd>
                     </div>
                 </dl>
 
@@ -164,6 +164,7 @@
                         <ul class="case-list">
                             <li>Upfront fares and live ETAs before a ride is confirmed.</li>
                             <li>Smart dispatch that matches each request to a nearby available driver.</li>
+                            <li>Real-time ride, driver-location, and trip-status updates pushed from a Node.js service.</li>
                             <li>Rides and door-to-door package delivery from the same platform.</li>
                             <li>Fleet management for drivers, fleet owners, and vehicles.</li>
                             <li>Live operations: fleet map, heat map, SOS alerts, live chat, and complaints.</li>
@@ -179,6 +180,7 @@
                         </p>
                         <ul class="case-list">
                             <li>Designed and implemented Laravel REST endpoints for ride requests, dispatch, trips, drivers, riders, fleets, and vehicles.</li>
+                            <li>Built the Node.js real-time layer that pushes ride, driver, and trip-status updates to the rider and driver apps and the operations dashboard.</li>
                             <li>Modelled zones, service locations, and trip state transitions in MySQL.</li>
                             <li>Implemented trip PIN verification and returned upfront fare and ETA data to the client apps.</li>
                             <li>Built dashboard views for the live trip feed, driver approvals, and emergency SOS alerts.</li>
@@ -196,6 +198,10 @@
                             <article class="case-feature">
                                 <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Smart dispatch</h3>
                                 <p>Each request goes straight to available drivers nearby so matches happen quickly and automatically.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Real-time rides</h3>
+                                <p>Ride requests, driver locations, and trip status update live through a Node.js service, so riders and the operations team always see the current state.</p>
                             </article>
                             <article class="case-feature">
                                 <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Rides &amp; delivery</h3>
@@ -296,6 +302,7 @@
                             <li>PHP</li>
                             <li>MySQL</li>
                             <li>REST API</li>
+                            <li>Node.js</li>
                             <li>JavaScript (ES6+)</li>
                             <li>Payments</li>
                             <li>Git</li>
@@ -304,8 +311,9 @@
                         <div class="case-callout">
                             <p>
                                 <strong>Architecture:</strong> an API-first Laravel backend serving the marketing site,
-                                the rider and driver apps, and a real-time operations dashboard, backed by a MySQL schema
-                                built around zones, trips, and fare rules.
+                                the rider and driver apps, and a real-time operations dashboard; a Node.js real-time
+                                layer pushing ride, driver, and trip-status updates; and a MySQL schema built around
+                                zones, trips, and fare rules.
                             </p>
                         </div>
                     </section>
