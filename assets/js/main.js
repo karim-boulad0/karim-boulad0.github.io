@@ -315,6 +315,92 @@
     });
 
     /* ------------------------------------------------------------------
+       Project tabs (two desktop apps in one case study)
+       ------------------------------------------------------------------ */
+    var caseTabsRoot = document.querySelector("[data-case-tabs]");
+
+    if (caseTabsRoot) {
+        var caseTabs = Array.prototype.slice.call(
+            caseTabsRoot.querySelectorAll('[role="tab"]')
+        );
+
+        function activateCaseTab(tab, focus, updateHash) {
+            caseTabs.forEach(function (item) {
+                var selected = item === tab;
+                item.setAttribute("aria-selected", selected ? "true" : "false");
+                item.tabIndex = selected ? 0 : -1;
+                item.classList.toggle("is-active", selected);
+
+                var panel = document.getElementById(item.getAttribute("aria-controls"));
+                if (panel) panel.hidden = !selected;
+            });
+
+            if (focus) tab.focus();
+            if (updateHash !== false && history.replaceState) {
+                history.replaceState(null, "", "#" + tab.getAttribute("data-case-tab"));
+            }
+        }
+
+        caseTabs.forEach(function (tab, index) {
+            tab.addEventListener("click", function () {
+                activateCaseTab(tab);
+            });
+
+            tab.addEventListener("keydown", function (event) {
+                var target = null;
+
+                if (event.key === "ArrowRight") {
+                    target = caseTabs[(index + 1) % caseTabs.length];
+                } else if (event.key === "ArrowLeft") {
+                    target = caseTabs[(index - 1 + caseTabs.length) % caseTabs.length];
+                } else if (event.key === "Home") {
+                    target = caseTabs[0];
+                } else if (event.key === "End") {
+                    target = caseTabs[caseTabs.length - 1];
+                }
+
+                if (target) {
+                    event.preventDefault();
+                    activateCaseTab(target, true);
+                }
+            });
+        });
+
+        function syncCaseTabFromHash() {
+            var hash = window.location.hash.slice(1);
+            if (!hash) return;
+
+            try {
+                hash = decodeURIComponent(hash);
+            } catch (error) {
+                return;
+            }
+
+            var direct = caseTabs.filter(function (tab) {
+                return tab.getAttribute("data-case-tab") === hash;
+            })[0];
+
+            if (direct) {
+                activateCaseTab(direct, false, false);
+                return;
+            }
+
+            var target = document.getElementById(hash);
+            if (!target) return;
+
+            var owner = caseTabs.filter(function (tab) {
+                var panel = document.getElementById(tab.getAttribute("aria-controls"));
+                return panel && panel.contains(target);
+            })[0];
+
+            if (owner) activateCaseTab(owner, false, false);
+        }
+
+        syncCaseTabFromHash();
+        window.addEventListener("hashchange", syncCaseTabFromHash);
+    }
+
+    /* ------------------------------------------------------------------
        Lightbox (case study gallery)
        ------------------------------------------------------------------ */
     var lightbox = document.getElementById("lightbox");
@@ -329,10 +415,17 @@
             document.querySelectorAll("[data-lightbox]")
         );
         var lightboxIndex = 0;
+
+        function activeGalleryItems() {
+            var panel = document.querySelector(".case-panel:not([hidden])");
+            var scope = panel || document;
+            return Array.prototype.slice.call(scope.querySelectorAll("[data-lightbox]"));
+        }
         var previouslyFocused = null;
 
         function updateLightbox() {
-            var item = galleryItems[lightboxIndex];
+            var items = activeGalleryItems();
+            var item = items[lightboxIndex];
             if (!item) return;
 
             var thumb = item.querySelector("img");
@@ -371,14 +464,17 @@
         }
 
         function showNext(step) {
-            if (!galleryItems.length) return;
-            lightboxIndex = (lightboxIndex + step + galleryItems.length) % galleryItems.length;
+            var items = activeGalleryItems();
+            if (!items.length) return;
+            lightboxIndex = (lightboxIndex + step + items.length) % items.length;
             updateLightbox();
         }
 
-        galleryItems.forEach(function (item, index) {
+        galleryItems.forEach(function (item) {
             item.addEventListener("click", function () {
-                openLightbox(index);
+                var items = activeGalleryItems();
+                var index = items.indexOf(item);
+                openLightbox(index >= 0 ? index : 0);
             });
         });
 

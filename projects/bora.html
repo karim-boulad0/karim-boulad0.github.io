@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bora &amp; Business Suite POS — Desktop ERP Apps | Case Study | Karim Boulad</title>
-    <meta name="description" content="Case study: two offline-first Electron desktop apps — Bora, a scrap-yard ERP with weighted purchasing and USD/LBP reporting, and Business Suite POS for Wassim Shop with bilingual checkout, inventory, customer debts, and financial reports.">
+    <title>Business Suite POS &amp; Bora — Desktop ERP Apps | Case Study | Karim Boulad</title>
+    <meta name="description" content="Case study: two offline-first Electron desktop apps — Business Suite POS for Wassim Shop with bilingual checkout, barcode sales, inventory, customer debts, and financial reports, and Bora, a scrap-yard ERP with weighted purchasing and USD/LBP reporting.">
     <meta name="author" content="Karim Boulad">
     <meta name="theme-color" content="#060a12">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Bora &amp; Business Suite POS — Desktop ERP Apps | Case Study | Karim Boulad">
-    <meta property="og:description" content="Two offline-first desktop ERP and POS systems built with Electron, React, and SQLite — a scrap-yard ERP and a bilingual retail POS.">
+    <meta property="og:title" content="Business Suite POS &amp; Bora — Desktop ERP Apps | Case Study | Karim Boulad">
+    <meta property="og:description" content="Two offline-first desktop ERP and POS systems built with Electron, React, and SQLite — a bilingual retail POS and a scrap-yard ERP.">
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%2360a5fa'%3EKB%3C/text%3E%3C/svg%3E">
 
@@ -86,17 +86,17 @@
                     <span aria-hidden="true">/</span>
                     <a href="../index.html#projects">Projects</a>
                     <span aria-hidden="true">/</span>
-                    <span aria-current="page">Bora &amp; Business Suite POS</span>
+                    <span aria-current="page">Business Suite POS &amp; Bora</span>
                 </nav>
 
                 <span class="eyebrow"><span class="status-dot"></span> Case study · Desktop ERP &amp; POS systems</span>
 
-                <h1 class="case-title">Bora &amp; Business Suite POS</h1>
+                <h1 class="case-title">Business Suite POS &amp; Bora</h1>
 
                 <p class="case-lead">
-                    Two offline-first Electron desktop apps for two very different counters: Bora, a scrap-yard ERP
-                    with purchasing by weight, point of sale, cash box, and USD/LBP profit reporting; and Business Suite,
-                    a bilingual retail POS for Wassim Shop with barcode checkout, inventory, customer debts, and reports.
+                    Two offline-first Electron desktop apps for two very different counters: Business Suite POS, a
+                    bilingual retail system for Wassim Shop with barcode checkout, inventory, customer debts, and
+                    reports; and Bora, a scrap-yard ERP with purchasing by weight, cash box, and USD/LBP profit reporting.
                 </p>
 
                 <dl class="case-meta">
@@ -118,36 +118,199 @@
                     </div>
                 </dl>
 
-                <figure class="cover-frame">
-                    <div class="cover-bar">
-                        <span></span><span></span><span></span>
-                        <p>bora-scrap-pos — dashboard</p>
-                    </div>
-                    <img src="../assets/imgs/bora-1.webp" alt="Bora dashboard showing today's sales, purchases, net profit, cash balance, and the latest transactions" width="1920" height="1010" fetchpriority="high">
-                </figure>
             </div>
         </section>
 
         <div class="container">
-            <div class="case-layout">
-                <aside class="case-aside">
-                    <span class="case-aside-label">On this page</span>
-                    <nav class="case-nav" aria-label="Case study sections">
-                        <a href="#overview">Overview</a>
-                        <a href="#role">My role</a>
-                        <a href="#features">Key features</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#stack">Tech stack</a>
-                        <a href="#outcome">Bora — Outcome</a>
-                        <a href="#business-suite">Business Suite POS</a>
-                    </nav>
+            <div class="case-switcher" data-case-tabs>
+                <div class="case-switcher-bar">
+                    <div class="case-tabs" role="tablist" aria-label="Choose a desktop project">
+                        <button class="case-tab is-active" id="tab-pos" type="button" role="tab"
+                                aria-selected="true" aria-controls="panel-pos" data-case-tab="pos">
+                            <span class="case-tab-num">01</span>
+                            <span class="case-tab-text">
+                                <strong>Business Suite POS</strong>
+                                <small>Wassim Shop · retail POS</small>
+                            </span>
+                        </button>
+                        <button class="case-tab" id="tab-bora" type="button" role="tab"
+                                aria-selected="false" aria-controls="panel-bora" data-case-tab="bora" tabindex="-1">
+                            <span class="case-tab-num">02</span>
+                            <span class="case-tab-text">
+                                <strong>Bora</strong>
+                                <small>Scrap yard ERP</small>
+                            </span>
+                        </button>
+                    </div>
                     <a class="btn btn-ghost btn-sm" href="../index.html#projects">
                         <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
                         All projects
                     </a>
-                </aside>
+                </div>
 
-                <div class="case-content">
+                <div class="case-panel" id="panel-pos" role="tabpanel" aria-labelledby="tab-pos" tabindex="0">
+                    <figure class="cover-frame">
+                        <div class="cover-bar">
+                            <span></span><span></span><span></span>
+                            <p>business-suite-pos — dashboard</p>
+                        </div>
+                        <img src="../assets/imgs/wassim-pos-dashboard.webp" alt="Business Suite POS dashboard with sales, profit, inventory, and debt indicators" width="1920" height="1011" fetchpriority="high">
+                    </figure>
+                    <section class="case-section" id="business-suite">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg> Business Suite POS — Wassim Shop</h2>
+                        <p>
+                            Business Suite is a complete sales and point-of-sale system built for a small retail shop —
+                            Wassim Shop. It handles the daily routine of a busy store: bilingual Arabic/English screens,
+                            fast checkout with barcode scanning, inventory, customer debts, expenses, and detailed
+                            financial reports. The interface is deliberately simple and responsive so cashiers can move
+                            quickly at the counter.
+                        </p>
+                        <div class="case-features">
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Daily dashboard</h3>
+                                <p>A quick, comprehensive view of daily and monthly performance: profit margin, invoice count, sales in both USD and the local currency, stock value, customer receivables, and supplier payables — with fast navigation between modules and period filters.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Fast point of sale</h3>
+                                <p>Search or scan products by barcode, adjust cart quantities, and see totals in both currencies instantly from the active exchange rate. Accept cash or post the sale as a debt to a named customer, with shift management and quick access to best sellers.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Products &amp; inventory</h3>
+                                <p>Add and edit products with barcodes, stock counts, purchase price, and selling price, with automatic margin calculation. Advanced search, import/export, and a detailed stock table make stocktaking straightforward.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Customer debts &amp; ledger</h3>
+                                <p>A detailed financial ledger for credit sales and payments per customer — every movement recorded with date, time, amount, and the employee who made it, so account statements stay accurate and easy to review.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Reports &amp; analytics</h3>
+                                <p>Visual and financial reports for daily and weekly sales and profit: sales-over-time charts, invoice and collection breakdowns by cash or credit, and exportable reports for data-driven decisions.</p>
+                            </article>
+                            <article class="case-feature">
+                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Settings &amp; dark mode</h3>
+                                <p>Configure the business name, reference exchange rate, base currency, navigation layout, light/dark theme, and system language so the app fits the way the shop actually works.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="case-section" id="business-suite-gallery">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-layout"></use></svg> Business Suite — Screenshots</h2>
+                        <p>Six screens of the complete POS and inventory workflow. Click any screenshot to open it at full size; use the arrow keys to move between images.</p>
+
+                        <div class="case-gallery">
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wassim-pos-dashboard.webp"
+                                    data-caption="Dashboard — profit, invoice count, sales in USD and LBP, stock value, customer debts, supplier payables, and period filters.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wassim-pos-dashboard.webp" alt="Business Suite dashboard with sales, profit, inventory, and debt indicators" width="1920" height="1011" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Dashboard</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wassim-pos-point-of-sale.webp"
+                                    data-caption="Point of sale — product search and barcode entry, cart quantities, dual-currency totals, cash or credit tender, and shift control.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wassim-pos-point-of-sale.webp" alt="Business Suite point-of-sale screen with product search, cart, and dual-currency totals" width="1920" height="1022" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Point of sale</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wassim-pos-products-inventory.webp"
+                                    data-caption="Products &amp; inventory — barcodes, stock counts, purchase and selling prices, automatic margin, search, import/export, and stocktaking table.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wassim-pos-products-inventory.webp" alt="Business Suite products and inventory table with prices, barcodes, and stock quantities" width="1920" height="1026" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Products &amp; inventory</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wassim-pos-customer-debts.webp"
+                                    data-caption="Customer debts &amp; ledger — credit sales and payments per customer, timestamped and attributed to the employee who recorded them.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wassim-pos-customer-debts.webp" alt="Business Suite customer debt ledger showing dated credit sales and payments" width="1920" height="1027" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Customer debts</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wassim-pos-reports.webp"
+                                    data-caption="Reports &amp; analytics — sales and profit charts, invoices and collections by cash or credit, and exportable financial reports.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wassim-pos-reports.webp" alt="Business Suite reports screen with sales charts and financial summaries" width="1920" height="1020" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Reports &amp; analytics</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+
+                            <button class="gallery-item" type="button"
+                                    data-lightbox
+                                    data-full="../assets/imgs/wassim-pos-settings-dark.webp"
+                                    data-caption="System settings in dark mode — business name, exchange rate, base currency, navigation layout, theme, and language.">
+                                <span class="gallery-thumb">
+                                    <img src="../assets/imgs/wassim-pos-settings-dark.webp" alt="Business Suite settings screen in dark mode with currency and language options" width="1920" height="1020" loading="lazy" decoding="async">
+                                </span>
+                                <span class="gallery-caption">
+                                    <span>Settings — dark mode</span>
+                                    <span>View larger</span>
+                                </span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="case-section" id="business-suite-stack">
+                        <h2><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg> Business Suite — Tech stack</h2>
+                        <p>The same offline-first approach as Bora: a Windows desktop app that needs no server and no internet connection at the counter, with a local database that is easy to back up.</p>
+                        <ul class="case-stack">
+                            <li>Electron.js</li>
+                            <li>React</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Node.js</li>
+                            <li>SQLite</li>
+                            <li>Arabic / English UI</li>
+                            <li>CSS</li>
+                            <li>Git</li>
+                        </ul>
+
+                        <div class="case-callout">
+                            <p>
+                                <strong>Architecture:</strong> an Electron shell around a React interface and a local
+                                SQLite database. Barcode entry, cart totals, exchange-rate conversion, customer balances,
+                                and reports all run on the device — so the shop keeps selling through power and internet
+                                outages, and every amount is stored with the rate that applied at the time of sale.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="case-panel" id="panel-bora" role="tabpanel" aria-labelledby="tab-bora" tabindex="0" hidden>
+                    <figure class="cover-frame">
+                        <div class="cover-bar">
+                            <span></span><span></span><span></span>
+                            <p>bora-scrap-pos — dashboard</p>
+                        </div>
+                        <img src="../assets/imgs/bora-1.webp" alt="Bora dashboard showing today's sales, purchases, net profit, cash balance, and the latest transactions" width="1920" height="1010" loading="lazy" decoding="async">
+                    </figure>
                     <section class="case-section" id="overview">
                         <h2><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg> Bora — Overview</h2>
                         <p>
@@ -371,152 +534,6 @@
                                 Back to projects
                                 <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
                             </a>
-                        </div>
-                    </section>
-
-                    <section class="case-section" id="business-suite">
-                        <h2><svg class="icon" aria-hidden="true"><use href="#i-layers"></use></svg> Business Suite POS — Wassim Shop</h2>
-                        <p>
-                            Business Suite is a complete sales and point-of-sale system built for a small retail shop —
-                            Wassim Shop. It handles the daily routine of a busy store: bilingual Arabic/English screens,
-                            fast checkout with barcode scanning, inventory, customer debts, expenses, and detailed
-                            financial reports. The interface is deliberately simple and responsive so cashiers can move
-                            quickly at the counter.
-                        </p>
-                        <div class="case-features">
-                            <article class="case-feature">
-                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Daily dashboard</h3>
-                                <p>A quick, comprehensive view of daily and monthly performance: profit margin, invoice count, sales in both USD and the local currency, stock value, customer receivables, and supplier payables — with fast navigation between modules and period filters.</p>
-                            </article>
-                            <article class="case-feature">
-                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Fast point of sale</h3>
-                                <p>Search or scan products by barcode, adjust cart quantities, and see totals in both currencies instantly from the active exchange rate. Accept cash or post the sale as a debt to a named customer, with shift management and quick access to best sellers.</p>
-                            </article>
-                            <article class="case-feature">
-                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Products &amp; inventory</h3>
-                                <p>Add and edit products with barcodes, stock counts, purchase price, and selling price, with automatic margin calculation. Advanced search, import/export, and a detailed stock table make stocktaking straightforward.</p>
-                            </article>
-                            <article class="case-feature">
-                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Customer debts &amp; ledger</h3>
-                                <p>A detailed financial ledger for credit sales and payments per customer — every movement recorded with date, time, amount, and the employee who made it, so account statements stay accurate and easy to review.</p>
-                            </article>
-                            <article class="case-feature">
-                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Reports &amp; analytics</h3>
-                                <p>Visual and financial reports for daily and weekly sales and profit: sales-over-time charts, invoice and collection breakdowns by cash or credit, and exportable reports for data-driven decisions.</p>
-                            </article>
-                            <article class="case-feature">
-                                <h3><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg> Settings &amp; dark mode</h3>
-                                <p>Configure the business name, reference exchange rate, base currency, navigation layout, light/dark theme, and system language so the app fits the way the shop actually works.</p>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="case-section" id="business-suite-gallery">
-                        <h2><svg class="icon" aria-hidden="true"><use href="#i-layout"></use></svg> Business Suite — Screenshots</h2>
-                        <p>Six screens of the complete POS and inventory workflow. Click any screenshot to open it at full size; use the arrow keys to move between images.</p>
-
-                        <div class="case-gallery">
-                            <button class="gallery-item" type="button"
-                                    data-lightbox
-                                    data-full="../assets/imgs/wassim-pos-dashboard.webp"
-                                    data-caption="Dashboard — profit, invoice count, sales in USD and LBP, stock value, customer debts, supplier payables, and period filters.">
-                                <span class="gallery-thumb">
-                                    <img src="../assets/imgs/wassim-pos-dashboard.webp" alt="Business Suite dashboard with sales, profit, inventory, and debt indicators" width="1920" height="1011" loading="lazy" decoding="async">
-                                </span>
-                                <span class="gallery-caption">
-                                    <span>Dashboard</span>
-                                    <span>View larger</span>
-                                </span>
-                            </button>
-
-                            <button class="gallery-item" type="button"
-                                    data-lightbox
-                                    data-full="../assets/imgs/wassim-pos-point-of-sale.webp"
-                                    data-caption="Point of sale — product search and barcode entry, cart quantities, dual-currency totals, cash or credit tender, and shift control.">
-                                <span class="gallery-thumb">
-                                    <img src="../assets/imgs/wassim-pos-point-of-sale.webp" alt="Business Suite point-of-sale screen with product search, cart, and dual-currency totals" width="1920" height="1022" loading="lazy" decoding="async">
-                                </span>
-                                <span class="gallery-caption">
-                                    <span>Point of sale</span>
-                                    <span>View larger</span>
-                                </span>
-                            </button>
-
-                            <button class="gallery-item" type="button"
-                                    data-lightbox
-                                    data-full="../assets/imgs/wassim-pos-products-inventory.webp"
-                                    data-caption="Products &amp; inventory — barcodes, stock counts, purchase and selling prices, automatic margin, search, import/export, and stocktaking table.">
-                                <span class="gallery-thumb">
-                                    <img src="../assets/imgs/wassim-pos-products-inventory.webp" alt="Business Suite products and inventory table with prices, barcodes, and stock quantities" width="1920" height="1026" loading="lazy" decoding="async">
-                                </span>
-                                <span class="gallery-caption">
-                                    <span>Products &amp; inventory</span>
-                                    <span>View larger</span>
-                                </span>
-                            </button>
-
-                            <button class="gallery-item" type="button"
-                                    data-lightbox
-                                    data-full="../assets/imgs/wassim-pos-customer-debts.webp"
-                                    data-caption="Customer debts &amp; ledger — credit sales and payments per customer, timestamped and attributed to the employee who recorded them.">
-                                <span class="gallery-thumb">
-                                    <img src="../assets/imgs/wassim-pos-customer-debts.webp" alt="Business Suite customer debt ledger showing dated credit sales and payments" width="1920" height="1027" loading="lazy" decoding="async">
-                                </span>
-                                <span class="gallery-caption">
-                                    <span>Customer debts</span>
-                                    <span>View larger</span>
-                                </span>
-                            </button>
-
-                            <button class="gallery-item" type="button"
-                                    data-lightbox
-                                    data-full="../assets/imgs/wassim-pos-reports.webp"
-                                    data-caption="Reports &amp; analytics — sales and profit charts, invoices and collections by cash or credit, and exportable financial reports.">
-                                <span class="gallery-thumb">
-                                    <img src="../assets/imgs/wassim-pos-reports.webp" alt="Business Suite reports screen with sales charts and financial summaries" width="1920" height="1020" loading="lazy" decoding="async">
-                                </span>
-                                <span class="gallery-caption">
-                                    <span>Reports &amp; analytics</span>
-                                    <span>View larger</span>
-                                </span>
-                            </button>
-
-                            <button class="gallery-item" type="button"
-                                    data-lightbox
-                                    data-full="../assets/imgs/wassim-pos-settings-dark.webp"
-                                    data-caption="System settings in dark mode — business name, exchange rate, base currency, navigation layout, theme, and language.">
-                                <span class="gallery-thumb">
-                                    <img src="../assets/imgs/wassim-pos-settings-dark.webp" alt="Business Suite settings screen in dark mode with currency and language options" width="1920" height="1020" loading="lazy" decoding="async">
-                                </span>
-                                <span class="gallery-caption">
-                                    <span>Settings — dark mode</span>
-                                    <span>View larger</span>
-                                </span>
-                            </button>
-                        </div>
-                    </section>
-
-                    <section class="case-section" id="business-suite-stack">
-                        <h2><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg> Business Suite — Tech stack</h2>
-                        <p>The same offline-first approach as Bora: a Windows desktop app that needs no server and no internet connection at the counter, with a local database that is easy to back up.</p>
-                        <ul class="case-stack">
-                            <li>Electron.js</li>
-                            <li>React</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>Node.js</li>
-                            <li>SQLite</li>
-                            <li>Arabic / English UI</li>
-                            <li>CSS</li>
-                            <li>Git</li>
-                        </ul>
-
-                        <div class="case-callout">
-                            <p>
-                                <strong>Architecture:</strong> an Electron shell around a React interface and a local
-                                SQLite database. Barcode entry, cart totals, exchange-rate conversion, customer balances,
-                                and reports all run on the device — so the shop keeps selling through power and internet
-                                outages, and every amount is stored with the rate that applied at the time of sale.
-                            </p>
                         </div>
                     </section>
                 </div>
