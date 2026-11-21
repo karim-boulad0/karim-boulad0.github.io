@@ -124,25 +124,42 @@
         <div class="container">
             <div class="case-switcher" data-case-tabs>
                 <div class="case-switcher-bar">
-                    <div class="case-tabs" role="tablist" aria-label="Choose a desktop project">
-                        <button class="case-tab is-active" id="tab-pos" type="button" role="tab"
-                                aria-selected="true" aria-controls="panel-pos" data-case-tab="pos">
-                            <span class="case-tab-num">01</span>
-                            <span class="case-tab-text">
-                                <strong>Business Suite POS</strong>
-                                <small>Wassim Shop · retail POS</small>
-                            </span>
-                        </button>
-                        <button class="case-tab" id="tab-bora" type="button" role="tab"
-                                aria-selected="false" aria-controls="panel-bora" data-case-tab="bora" tabindex="-1">
-                            <span class="case-tab-num">02</span>
-                            <span class="case-tab-text">
-                                <strong>Bora</strong>
-                                <small>Scrap yard ERP</small>
-                            </span>
-                        </button>
+                    <div class="case-tabs-wrap">
+                        <p class="case-switcher-label">Two desktop apps — choose one</p>
+                        <div class="case-tabs" role="tablist" aria-label="Choose a desktop project">
+                            <button class="case-tab is-active" id="tab-pos" type="button" role="tab"
+                                    aria-selected="true" aria-controls="panel-pos" data-case-tab="pos">
+                                <span class="case-tab-media">
+                                    <img src="../assets/imgs/wassim-pos-dashboard.webp" alt="" width="1920" height="1011" decoding="async">
+                                    <span class="case-tab-num" aria-hidden="true">01</span>
+                                </span>
+                                <span class="case-tab-body">
+                                    <strong>Business Suite POS</strong>
+                                    <small>Wassim Shop · retail POS</small>
+                                    <span class="case-tab-cta">
+                                        Open case study
+                                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                                    </span>
+                                </span>
+                            </button>
+                            <button class="case-tab" id="tab-bora" type="button" role="tab"
+                                    aria-selected="false" aria-controls="panel-bora" data-case-tab="bora" tabindex="-1">
+                                <span class="case-tab-media">
+                                    <img src="../assets/imgs/bora-1.webp" alt="" width="1920" height="1010" decoding="async">
+                                    <span class="case-tab-num" aria-hidden="true">02</span>
+                                </span>
+                                <span class="case-tab-body">
+                                    <strong>Bora</strong>
+                                    <small>Scrap yard ERP</small>
+                                    <span class="case-tab-cta">
+                                        Open case study
+                                        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
-                    <a class="btn btn-ghost btn-sm" href="../index.html#projects">
+                    <a class="btn btn-ghost btn-sm case-all-projects" href="../index.html#projects">
                         <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
                         All projects
                     </a>
